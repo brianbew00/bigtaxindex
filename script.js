@@ -1,4 +1,3 @@
-
 function calculatePreTaxIncome() {
     // Get values from inputs
     const price = parseFloat(document.getElementById('price').value);
