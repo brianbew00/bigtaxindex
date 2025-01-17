@@ -12,23 +12,40 @@ body {
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     padding: 20px;
-    max-width: 400px;
+    max-width: 800px;
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
-h2, .result-heading {
+h2 {
     text-align: center;
-    font-size: 1.5em;
-    font-weight: bold;
-    margin-top: 20px;
+    font-size: 1.8em;
     color: #333333;
 }
 
-h3, .result-subheading {
+.calculator-container {
+    display: flex;
+    gap: 20px;
+}
+
+.inputs-section {
+    flex: 1;
+}
+
+.chart-section {
+    flex: 1;
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.chart-section h3 {
     font-size: 1.2em;
-    margin-top: 15px;
-    font-weight: bold;
-    color: #444444;
+    margin-bottom: 10px;
 }
 
 .input-group {
@@ -76,25 +93,4 @@ h3, .result-subheading {
     font-size: 14px;
     line-height: 1.6;
     color: #555555;
-}
-
-.result-heading {
-    font-size: 1.2em;
-    font-weight: bold;
-    color: #333333;
-    text-align: center;
-}
-
-.result-subheading {
-    font-size: 1em;
-    font-weight: bold;
-    margin-top: 15px;
-    color: #444444;
-}
-
-.formula {
-    font-size: 0.9em;
-    color: #666666;
-    margin-left: 15px;
-    line-height: 1.5;
 }
