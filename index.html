@@ -1,52 +1,34 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Big Tax Index Calculator</title>
-    <link rel="stylesheet" href="style_updated.css">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title>Tax Calculator</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
-        <h2>Big Tax Index</h2>
-        <div class="calculator-container">
-            <!-- Inputs Section -->
-            <div class="inputs-section">
-                <div class="input-group">
-                    <label for="price">Price of Item ($):</label>
-                    <input type="number" id="price" value="10" placeholder="Enter item price">
-                </div>
-
-                <div class="input-group">
-                    <label for="salesTax">Sales Tax Rate (%):</label>
-                    <input type="number" id="salesTax" value="7" placeholder="Enter sales tax rate">
-                </div>
-
-                <div class="input-group">
-                    <label for="federalTax">Federal Tax Rate (%):</label>
-                    <input type="number" id="federalTax" value="24" placeholder="Enter federal tax rate">
-                </div>
-
-                <div class="input-group">
-                    <label for="stateTax">State Tax Rate (%):</label>
-                    <input type="number" id="stateTax" value="5" placeholder="Enter state tax rate">
-                </div>
-
-                <button class="btn" onclick="calculatePreTaxIncome()">Calculate</button>
-            </div>
-
-            <!-- Chart Section -->
-            <div id="chart-container" class="chart-section">
-                <h3>Income Components</h3>
-                <canvas id="incomeChart"></canvas>
-            </div>
+        <h1>Tax Calculator</h1>
+        <div class="input-field">
+            <label for="price">Item Price ($):</label>
+            <input type="number" id="price" placeholder="Enter base price">
         </div>
-
-        <!-- Results Section -->
-        <div id="result" class="result"></div>
+        <div class="input-field">
+            <label for="salesTax">Sales Tax Rate (%):</label>
+            <input type="number" id="salesTax" placeholder="Enter sales tax rate">
+        </div>
+        <div class="input-field">
+            <label for="stateTax">State Income Tax Rate (%):</label>
+            <input type="number" id="stateTax" placeholder="Enter state income tax rate">
+        </div>
+        <div class="input-field">
+            <label for="federalTax">Federal Income Tax Rate (%):</label>
+            <input type="number" id="federalTax" placeholder="Enter federal income tax rate">
+        </div>
+        <button onclick="calculate()">Calculate</button>
+        <div class="result" id="result"></div>
     </div>
-
-    <script src="script_updated.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

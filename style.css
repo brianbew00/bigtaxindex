@@ -1,95 +1,61 @@
+
 body {
     font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 20px;
-    background-color: #f9f9f9;
-    color: #333333;
+    margin: 20px;
+    background-color: #f4f4f4;
 }
 
 .container {
-    background: #ffffff;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #fff;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    max-width: 800px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
 }
 
-h2 {
+h1 {
     text-align: center;
-    font-size: 1.8em;
-    color: #333333;
+    color: #333;
 }
 
-.calculator-container {
-    display: flex;
-    gap: 20px;
+.input-field {
+    margin-bottom: 15px;
 }
 
-.inputs-section {
-    flex: 1;
-}
-
-.chart-section {
-    flex: 1;
-    background-color: #f9f9f9;
-    padding: 10px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    text-align: center;
-}
-
-.chart-section h3 {
-    font-size: 1.2em;
-    margin-bottom: 10px;
-}
-
-.input-group {
-    margin: 10px 0;
-}
-
-.input-group label {
+label {
     display: block;
-    font-weight: bold;
     margin-bottom: 5px;
-    color: #555555;
+    font-weight: bold;
 }
 
-.input-group input {
+input[type="number"] {
     width: 100%;
-    padding: 10px;
-    border: 1px solid #cccccc;
+    padding: 8px;
+    border: 1px solid #ccc;
     border-radius: 4px;
-    box-sizing: border-box;
 }
 
-.btn {
+button {
     width: 100%;
     padding: 10px;
-    background-color: #28a745;
+    background-color: #007BFF;
     color: white;
     border: none;
+    border-radius: 4px;
     cursor: pointer;
     font-size: 16px;
-    border-radius: 4px;
-    margin-top: 10px;
-    transition: background-color 0.3s ease;
 }
 
-.btn:hover {
-    background-color: #218838;
+button:hover {
+    background-color: #0056b3;
 }
 
 .result {
     margin-top: 20px;
-    padding: 15px;
-    background-color: #ffffff;
+    font-weight: bold;
+    background: #f9f9f9;
+    padding: 10px;
+    border: 1px solid #ddd;
     border-radius: 4px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    font-size: 14px;
-    line-height: 1.6;
-    color: #555555;
 }
