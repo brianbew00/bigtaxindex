@@ -1,10 +1,19 @@
 
 body {
     font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f9f9f9;
+    color: #333333;
+}
+
+.container {
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
     max-width: 400px;
     margin: 0 auto;
-    padding: 20px;
-    background-color: #f4f4f9;
 }
 
 h2, .result-heading {
@@ -12,12 +21,14 @@ h2, .result-heading {
     font-size: 1.5em;
     font-weight: bold;
     margin-top: 20px;
+    color: #333333;
 }
 
 h3, .result-subheading {
     font-size: 1.2em;
     margin-top: 15px;
     font-weight: bold;
+    color: #444444;
 }
 
 .input-group {
@@ -28,11 +39,14 @@ h3, .result-subheading {
     display: block;
     font-weight: bold;
     margin-bottom: 5px;
+    color: #555555;
 }
 
 .input-group input {
     width: 100%;
-    padding: 8px;
+    padding: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
     box-sizing: border-box;
 }
 
@@ -44,6 +58,9 @@ h3, .result-subheading {
     border: none;
     cursor: pointer;
     font-size: 16px;
+    border-radius: 4px;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
 }
 
 .btn:hover {
@@ -52,7 +69,32 @@ h3, .result-subheading {
 
 .result {
     margin-top: 20px;
-    padding: 10px;
-    background-color: #e9ecef;
-    font-size: 16px;
+    padding: 15px;
+    background-color: #ffffff;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-size: 14px;
+    line-height: 1.6;
+    color: #555555;
+}
+
+.result-heading {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #333333;
+    text-align: center;
+}
+
+.result-subheading {
+    font-size: 1em;
+    font-weight: bold;
+    margin-top: 15px;
+    color: #444444;
+}
+
+.formula {
+    font-size: 0.9em;
+    color: #666666;
+    margin-left: 15px;
+    line-height: 1.5;
 }
