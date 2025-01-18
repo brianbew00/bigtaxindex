@@ -9,26 +9,30 @@
 </head>
 <body onload="calculateAndUpdateChart()">
     <div class="container">
-        <h1>Tax Calculator</h1>
-        <div class="input-field">
-            <label for="price">Item Price ($):</label>
-            <input type="number" id="price" placeholder="Enter base price" value="10" onchange="calculateAndUpdateChart()">
+        <div class="chart-container">
+            <canvas id="chart" width="200" height="400"></canvas>
         </div>
-        <div class="input-field">
-            <label for="salesTax">Sales Tax Rate (%):</label>
-            <input type="number" id="salesTax" placeholder="Enter sales tax rate" value="7" onchange="calculateAndUpdateChart()">
+        <div class="input-container">
+            <h1>Tax Calculator</h1>
+            <div class="input-field">
+                <label for="price">Item Price ($):</label>
+                <input type="number" id="price" placeholder="Enter base price" value="10" onchange="calculateAndUpdateChart()">
+            </div>
+            <div class="input-field">
+                <label for="salesTax">Sales Tax Rate (%):</label>
+                <input type="number" id="salesTax" placeholder="Enter sales tax rate" value="7" onchange="calculateAndUpdateChart()">
+            </div>
+            <div class="input-field">
+                <label for="stateTax">State Income Tax Rate (%):</label>
+                <input type="number" id="stateTax" placeholder="Enter state tax rate" value="5" onchange="calculateAndUpdateChart()">
+            </div>
+            <div class="input-field">
+                <label for="federalTax">Federal Income Tax Rate (%):</label>
+                <input type="number" id="federalTax" placeholder="Enter federal tax rate" value="24" onchange="calculateAndUpdateChart()">
+            </div>
+            <button onclick="calculateAndUpdateChart()">Calculate</button>
+            <div class="result" id="result"></div>
         </div>
-        <div class="input-field">
-            <label for="stateTax">State Income Tax Rate (%):</label>
-            <input type="number" id="stateTax" placeholder="Enter state tax rate" value="5" onchange="calculateAndUpdateChart()">
-        </div>
-        <div class="input-field">
-            <label for="federalTax">Federal Income Tax Rate (%):</label>
-            <input type="number" id="federalTax" placeholder="Enter federal tax rate" value="24" onchange="calculateAndUpdateChart()">
-        </div>
-        <button onclick="calculateAndUpdateChart()">Calculate</button>
-        <div class="result" id="result"></div>
-        <canvas id="chart" width="400" height="200"></canvas>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="script.js"></script>

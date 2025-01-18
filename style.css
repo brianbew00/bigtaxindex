@@ -6,12 +6,26 @@ body {
 }
 
 .container {
-    max-width: 400px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 800px;
     margin: 0 auto;
-    padding: 20px;
     background: #fff;
+    padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.chart-container {
+    flex: 1;
+    max-width: 50%;
+    text-align: center;
+}
+
+.input-container {
+    flex: 1;
+    max-width: 50%;
 }
 
 h1 {
@@ -62,5 +76,7 @@ button:hover {
 }
 
 canvas {
-    margin-top: 20px;
+    max-height: 400px;
+    max-width: 200px;
+    margin: 0 auto;
 }
