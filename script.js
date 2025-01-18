@@ -37,13 +37,10 @@ function calculateAndUpdateChart() {
         <div>
             Your purchasing power on income: ${purchasingPower.toFixed(1)}%
         </div>
-        <div>
-            Breakdown:
-            <ul>
-                <li>Base Price: ${formatter.format(price)}</li>
-                <li>Sales Tax Amount: ${formatter.format(salesTaxAmount)}</li>
-                <li>Income Tax Impact: ${formatter.format(incomeTaxImpact)}</li>
-            </ul>
+        <div class="breakdown">
+            Base Price: ${formatter.format(price)}<br>
+            Sales Tax Amount: ${formatter.format(salesTaxAmount)}<br>
+            Income Tax Impact: ${formatter.format(incomeTaxImpact)}
         </div>
     `;
 

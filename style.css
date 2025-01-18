@@ -77,7 +77,7 @@ button:hover {
 
 .result {
     background: #f9f9f9;
-    padding: 10px;
+    padding: 20px;
     border: 1px solid #ddd;
     border-radius: 4px;
     text-align: center;
@@ -89,8 +89,6 @@ button:hover {
     margin-bottom: 10px;
 }
 
-canvas {
-    max-height: 400px;
-    max-width: 200px;
-    margin: 0 auto;
+.result .breakdown {
+    margin-top: 10px;
 }
