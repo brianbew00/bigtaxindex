@@ -1,5 +1,7 @@
 
-function calculate() {
+let chart;
+
+function calculateAndUpdateChart() {
     const price = parseFloat(document.getElementById("price").value) || 0;
     const salesTax = parseFloat(document.getElementById("salesTax").value) || 0;
     const stateTax = parseFloat(document.getElementById("stateTax").value) || 0;
@@ -26,4 +28,50 @@ function calculate() {
         - Sales Tax Amount: $${salesTaxAmount.toFixed(2)}
         - Income Tax Impact: $${incomeTaxImpact.toFixed(2)}
     `;
+
+    // Update the chart
+    updateChart(price, salesTaxAmount, incomeTaxImpact);
+}
+
+function updateChart(basePrice, salesTax, incomeTax) {
+    const ctx = document.getElementById("chart").getContext("2d");
+
+    if (chart) {
+        chart.destroy(); // Destroy the previous chart instance to update it
+    }
+
+    chart = new Chart(ctx, {
+        type: "bar",
+        data: {
+            labels: ["Base Price", "Sales Tax", "Income Tax"],
+            datasets: [
+                {
+                    label: "Income Breakdown",
+                    data: [basePrice, salesTax, incomeTax],
+                    backgroundColor: ["#007BFF", "#FFC107", "#28A745"],
+                },
+            ],
+        },
+        options: {
+            responsive: true,
+            plugins: {
+                legend: {
+                    display: false,
+                },
+            },
+            scales: {
+                x: {
+                    stacked: true,
+                },
+                y: {
+                    stacked: true,
+                    beginAtZero: true,
+                    title: {
+                        display: true,
+                        text: "Dollars ($)",
+                    },
+                },
+            },
+        },
+    });
 }

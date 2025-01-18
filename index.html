@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tax Calculator</title>
+    <title>Tax Calculator with Chart</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -12,23 +12,25 @@
         <h1>Tax Calculator</h1>
         <div class="input-field">
             <label for="price">Item Price ($):</label>
-            <input type="number" id="price" placeholder="Enter base price">
+            <input type="number" id="price" placeholder="Enter base price" value="10">
         </div>
         <div class="input-field">
             <label for="salesTax">Sales Tax Rate (%):</label>
-            <input type="number" id="salesTax" placeholder="Enter sales tax rate">
+            <input type="number" id="salesTax" placeholder="Enter sales tax rate" value="7">
         </div>
         <div class="input-field">
             <label for="stateTax">State Income Tax Rate (%):</label>
-            <input type="number" id="stateTax" placeholder="Enter state income tax rate">
+            <input type="number" id="stateTax" placeholder="Enter state income tax rate" value="5">
         </div>
         <div class="input-field">
             <label for="federalTax">Federal Income Tax Rate (%):</label>
-            <input type="number" id="federalTax" placeholder="Enter federal income tax rate">
+            <input type="number" id="federalTax" placeholder="Enter federal income tax rate" value="24">
         </div>
-        <button onclick="calculate()">Calculate</button>
+        <button onclick="calculateAndUpdateChart()">Calculate</button>
         <div class="result" id="result"></div>
+        <canvas id="chart" width="400" height="200"></canvas>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
