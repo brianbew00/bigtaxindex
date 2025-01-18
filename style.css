@@ -17,7 +17,7 @@ body {
 .row {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: stretch; /* Ensure both sections match height */
     margin-bottom: 20px;
 }
 
@@ -35,7 +35,15 @@ body {
 .chart-container {
     flex: 1;
     max-width: 50%;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* Match height with input container */
+}
+
+canvas {
+    max-height: 100%; /* Scale the chart to fit the container height */
+    max-width: 100%;
 }
 
 h1 {
