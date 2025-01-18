@@ -43,20 +43,34 @@ function updateChart(basePrice, salesTax, incomeTax) {
     chart = new Chart(ctx, {
         type: "bar",
         data: {
-            labels: ["Base Price", "Sales Tax", "Income Tax"],
+            labels: ["Total Income Required"],
             datasets: [
                 {
-                    label: "Income Breakdown",
-                    data: [basePrice, salesTax, incomeTax],
-                    backgroundColor: ["#007BFF", "#FFC107", "#28A745"],
+                    label: "Base Price",
+                    data: [basePrice],
+                    backgroundColor: "#007BFF",
+                },
+                {
+                    label: "Sales Tax",
+                    data: [salesTax],
+                    backgroundColor: "#FFC107",
+                },
+                {
+                    label: "Income Tax",
+                    data: [incomeTax],
+                    backgroundColor: "#28A745",
                 },
             ],
         },
         options: {
             responsive: true,
             plugins: {
+                tooltip: {
+                    mode: "index",
+                    intersect: false,
+                },
                 legend: {
-                    display: false,
+                    position: "top",
                 },
             },
             scales: {
