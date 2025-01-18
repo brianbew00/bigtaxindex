@@ -20,13 +20,31 @@ function calculateAndUpdateChart() {
     const salesTaxAmount = adjustedPrice - price;
     const incomeTaxImpact = incomeRequired - adjustedPrice;
 
+    // Calculate purchasing power
+    const purchasingPower = (price / incomeRequired) * 100;
+
+    // Format values as USD
+    const formatter = new Intl.NumberFormat("en-US", {
+        style: "currency",
+        currency: "USD",
+    });
+
     // Display results
-    document.getElementById("result").innerText = `
-        Income Required to Purchase: $${incomeRequired.toFixed(2)}
-        Breakdown:
-        - Base Price: $${price.toFixed(2)}
-        - Sales Tax Amount: $${salesTaxAmount.toFixed(2)}
-        - Income Tax Impact: $${incomeTaxImpact.toFixed(2)}
+    document.getElementById("result").innerHTML = `
+        <div class="summary">
+            Income Required to Purchase: ${formatter.format(incomeRequired)}
+        </div>
+        <div>
+            Your purchasing power on income: ${purchasingPower.toFixed(1)}%
+        </div>
+        <div>
+            Breakdown:
+            <ul>
+                <li>Base Price: ${formatter.format(price)}</li>
+                <li>Sales Tax Amount: ${formatter.format(salesTaxAmount)}</li>
+                <li>Income Tax Impact: ${formatter.format(incomeTaxImpact)}</li>
+            </ul>
+        </div>
     `;
 
     // Update the chart

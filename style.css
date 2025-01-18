@@ -76,12 +76,17 @@ button:hover {
 }
 
 .result {
-    font-weight: bold;
     background: #f9f9f9;
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 4px;
     text-align: center;
+}
+
+.result .summary {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 10px;
 }
 
 canvas {
