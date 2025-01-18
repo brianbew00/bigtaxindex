@@ -17,23 +17,21 @@ body {
 .row {
     display: flex;
     justify-content: space-between;
-    align-items: stretch; /* Ensure both sections match height */
-    margin-bottom: 20px;
-}
-
-.full-span {
-    flex-direction: column;
     align-items: stretch;
+    flex-wrap: wrap; /* Adjust layout for smaller screens */
+    margin-bottom: 20px;
 }
 
 .input-container {
     flex: 1;
+    min-width: 300px;
     max-width: 50%;
     margin-right: 20px;
 }
 
 .chart-container {
     flex: 1;
+    min-width: 300px;
     max-width: 50%;
     display: flex;
     justify-content: center;
@@ -44,6 +42,7 @@ body {
 canvas {
     max-height: 100%; /* Scale the chart to fit the container height */
     max-width: 100%;
+    aspect-ratio: 1 / 1; /* Maintain square aspect ratio */
 }
 
 h1 {

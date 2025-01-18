@@ -58,7 +58,7 @@ function updateChart(basePrice, salesTax, incomeTax) {
     chart = new Chart(ctx, {
         type: "bar",
         data: {
-            labels: ["Total Income Required"],
+            labels: [""], // Empty labels to remove the x-axis label
             datasets: [
                 {
                     label: "Base Price",
@@ -91,13 +91,21 @@ function updateChart(basePrice, salesTax, incomeTax) {
             scales: {
                 x: {
                     stacked: true,
+                    display: false, // Remove x-axis labels
                 },
                 y: {
                     stacked: true,
                     beginAtZero: true,
+                    ticks: {
+                        callback: function (value) {
+                            return new Intl.NumberFormat("en-US", {
+                                style: "currency",
+                                currency: "USD",
+                            }).format(value); // Format as USD
+                        },
+                    },
                     title: {
-                        display: true,
-                        text: "Dollars ($)",
+                        display: false, // Remove axis title for cleaner look
                     },
                 },
             },
