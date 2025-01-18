@@ -79,6 +79,7 @@ function updateChart(basePrice, salesTax, incomeTax) {
         },
         options: {
             responsive: true,
+            maintainAspectRatio: false, // Adjust height dynamically
             plugins: {
                 tooltip: {
                     mode: "index",
@@ -103,9 +104,6 @@ function updateChart(basePrice, salesTax, incomeTax) {
                                 currency: "USD",
                             }).format(value); // Format as USD
                         },
-                    },
-                    title: {
-                        display: false, // Remove axis title for cleaner look
                     },
                 },
             },

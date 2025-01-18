@@ -17,7 +17,7 @@ body {
 .row {
     display: flex;
     justify-content: space-between;
-    align-items: stretch;
+    align-items: stretch; /* Ensure height alignment */
     flex-wrap: wrap; /* Adjust layout for smaller screens */
     margin-bottom: 20px;
 }
@@ -25,24 +25,22 @@ body {
 .input-container {
     flex: 1;
     min-width: 300px;
-    max-width: 50%;
-    margin-right: 20px;
+    max-width: 48%;
 }
 
 .chart-container {
     flex: 1;
     min-width: 300px;
-    max-width: 50%;
+    max-width: 48%;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100%; /* Match height with input container */
+    height: auto; /* Automatically match height */
 }
 
 canvas {
-    max-height: 100%; /* Scale the chart to fit the container height */
-    max-width: 100%;
-    aspect-ratio: 1 / 1; /* Maintain square aspect ratio */
+    height: 100%; /* Adjust height dynamically */
+    width: auto; /* Maintain aspect ratio */
 }
 
 h1 {
